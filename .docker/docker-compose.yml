@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web-porto:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    container_name: web-porto
+    ports:
+      - "8080:80"
+    restart: unless-stopped
